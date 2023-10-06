@@ -18,10 +18,15 @@
 ##
 ##
 
-CPPFLAGS=-I/usr/include/opencascade
-CXXFLAGS=-std=c++11 -g -O0
+#CPPFLAGS=-I/~/libs/opencascade/v75/include/opencascade
+CPPFLAGS=-I/home/ludovic/libs/opencascade/v75/include/opencascade
+## CPPFLAGS=-I/usr/include/opencascade
+#CXXFLAGS=-std=c++11 -g -O0 
 
-LDFLAGS=-lTKSTL -lTKXDESTEP -lTKBinXCAF -lTKXmlXCAF -lTKXDEIGES -lTKXCAF \
+# extra debug...
+CXXFLAGS=-std=c++11 -g -O0 -Wall -Wextra #-Werror
+
+LDLIBS=-lTKSTL -lTKXDESTEP -lTKBinXCAF -lTKXmlXCAF -lTKXDEIGES -lTKXCAF \
  -lTKIGES -lTKSTEP -lTKSTEP209 -lTKSTEPAttr -lTKSTEPBase -lTKXSBase \
  -lTKStd -lTKStdL -lTKXml -lTKBin -lTKXmlL -lTKBinL -lTKCAF -lTKXCAF \
  -lTKLCAF -lTKCDF -lTKMeshVS -lTKOpenGl -lTKV3d -lTKService \
@@ -35,10 +40,12 @@ LDFLAGS=-lTKSTL -lTKXDESTEP -lTKBinXCAF -lTKXmlXCAF -lTKXDEIGES -lTKXCAF \
  -lTKPrim -lTKTopAlgo -lTKGeomAlgo -lTKBRep -lTKGeomBase \
  -lTKG3d -lTKG2d \
  \
- /usr/lib/x86_64-linux-gnu/libTKMath.so.7.3.0 \
- /usr/lib/x86_64-linux-gnu/libTKernel.so.7.3.0 \
+ ~/builds/opencascade/opencascade-7.5.0/build/lin64/gcc/lib/libTKMath.so.7.5.0 \
+ ~/builds/opencascade/opencascade-7.5.0/build/lin64/gcc/lib/libTKernel.so.7.5.0 \
  \
  -lfreetype -lpthread -lrt -lstdc++ -ldl -lm\
+ #/usr/lib/x86_64-linux-gnu/libTKMath.so.7.3.0 \
+ #/usr/lib/x86_64-linux-gnu/libTKernel.so.7.3.0 \
 
 
 all: openscad-step-reader
