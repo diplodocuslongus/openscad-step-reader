@@ -34,6 +34,9 @@
 #include <BRepTools_WireExplorer.hxx>
 #include <math.hxx>
 
+// need, gcc compiler
+#include <GeomAbs_SurfaceType.hxx> 
+#include <BRepAdaptor_Surface.hxx> 
 
 /* good resources:
    https://github.com/miho/OCC-CSG

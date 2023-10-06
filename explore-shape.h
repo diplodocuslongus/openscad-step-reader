@@ -15,5 +15,6 @@
 #define __EXPLORE__
 
 void explore_shape(const TopoDS_Shape& shape);
+//enum    GeomAbs_SurfaceType {};
 
 #endif
